@@ -1,0 +1,198 @@
+/* General styles */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f4f8;
+  color: #333;
+}
+
+h2 {
+  color: #2c3e50;
+  margin: 0;
+}
+button {
+  margin-top: 10px;
+}
+
+button[type="button"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button[type="button"]:hover {
+  background-color: #0056b3;
+}
+
+button[type="button"]:last-child {
+  background-color: red;
+}
+
+button[type="button"]:last-child:hover {
+  background-color: darkred;
+}
+
+button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+/* Calendar styles */
+.calendar {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.day {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.day:hover {
+  transform: scale(1.05);
+  background: #ecf0f1;
+}
+
+.day.current-day {
+  background: #2ecc71;
+  color: white;
+  font-weight: bold;
+}
+
+.day.other-month {
+  color: #bdc3c7;
+}
+
+.day.selected-day {
+  background: #e67e22;
+  color: white;
+}
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #34495e;
+  text-align: center;
+}
+
+.has-events {
+  border: 2px solid #e67e22;
+}
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.4s ease-in-out;
+}
+
+.modal-content h3 {
+  margin: 0 0 10px;
+  color: #2c3e50;
+}
+
+.modal-content form input,
+.modal-content form textarea,
+.modal-content form button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.modal-content form input,
+.modal-content form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.modal-content form textarea {
+  resize: none;
+}
+
+.modal-content form button {
+  background: #2ecc71;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal-content form button:hover {
+  background: #27ae60;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
