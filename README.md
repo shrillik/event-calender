@@ -8,6 +8,15 @@
 - **Event Filtering**: Allows users to search for events by keyword.
 - **Overlapping Events**: Prevents overlapping events for the same time.
 
+## **Directory Structure**
+src/
+├── App.js
+├── components/
+│   ├── Calendar.js
+│   ├── EventModal.js
+│   ├── EventList.js
+└── styles.css
+
 ## **Installation**
 
 1. Clone the repository:
